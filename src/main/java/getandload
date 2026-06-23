@@ -1,0 +1,12 @@
+get() =
+1) hits DB immediately✅ Yes
+2) id not foundreturns null
+3) Use whenYou're not sure if data exists
+
+load() =
+1) ❌ No (lazy)
+2) throws Exception
+3) You're sure data exists
+
+hibernate flow ->
+Create objects → Open Session → Begin Transaction → persist → commit → close

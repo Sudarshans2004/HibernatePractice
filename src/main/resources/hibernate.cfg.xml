@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernate_demo</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">root123</property>
+        <!-- dialect is the like language which dbms software we are using like we are using my sql dialect-->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <!-- this is property hbm2ddl update is table is not there then it will create table but there is table then it will ot create a new table-->
+        <property name="hibernate.hbm2ddl.auto">create</property>
+         <!-- to see which hibernate is making databases or we can see queries -->
+        <property name="hibernate.show_sql">true</property>
+        <mapping class="Student"/>
+        <mapping class="Address" />
+    </session-factory>
+</hibernate-configuration>
