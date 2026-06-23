@@ -16,5 +16,8 @@
         <property name="hibernate.show_sql">true</property>
         <mapping class="Student"/>
         <mapping class="Address" />
+        <mapping class="Question" />
+        <mapping class="Answer" />
+
     </session-factory>
 </hibernate-configuration>
