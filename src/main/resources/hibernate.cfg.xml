@@ -11,13 +11,17 @@
         <!-- dialect is the like language which dbms software we are using like we are using my sql dialect-->
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
         <!-- this is property hbm2ddl update is table is not there then it will create table but there is table then it will ot create a new table-->
-        <property name="hibernate.hbm2ddl.auto">create</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="format_sql">true</property>
          <!-- to see which hibernate is making databases or we can see queries -->
         <property name="hibernate.show_sql">true</property>
         <mapping class="Student"/>
         <mapping class="Address" />
-        <mapping class="Question" />
-        <mapping class="Answer" />
+        <mapping class="mapping.Question" />
+        <mapping class="mapping.Answer" />
+        <mapping class="manytomany.Emp" />
+        <mapping class="manytomany.Project" />
+
 
     </session-factory>
 </hibernate-configuration>
