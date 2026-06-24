@@ -2,6 +2,9 @@ package mapping;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 public class Question {
     @Id
@@ -9,18 +12,27 @@ public class Question {
     private int questionId;
     @Column(name = "question")
     private String question;
-
-    @OneToOne
-    @JoinColumn(name = "a_id")
-    private Answer answer;
-
-    public Question(int questionId, String question, Answer answer) {
-        this.questionId = questionId;
-        this.question = question;
-        this.answer = answer;
-    }
+// eager loading
+    @OneToMany(mappedBy = "question",fetch = FetchType.EAGER)
+    private List<Answer> answers = new ArrayList<>();
 
     public Question() {
+    }
+
+    public String getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(String question) {
+        this.question = question;
+    }
+
+    public List<Answer> getAnswers() {
+        return answers;
+    }
+
+    public void setAnswers(List<Answer> list) {
+        this.answers = list;
     }
 
     public int getQuestionId() {
@@ -31,19 +43,9 @@ public class Question {
         this.questionId = questionId;
     }
 
-    public Answer getAnswer() {
-        return answer;
-    }
-
-    public void setAnswer(Answer answer) {
-        this.answer = answer;
-    }
-
-    public String getQuestion() {
-        return question;
-    }
-
-    public void setQuestion(String question) {
+    public Question(int questionId, List<Answer> list, String question) {
+        this.questionId = questionId;
+        this.answers = answers;
         this.question = question;
     }
 }
