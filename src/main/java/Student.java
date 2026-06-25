@@ -14,12 +14,22 @@ public class Student {
                                                         //an internal sequence
     private int id;
 
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
     @Column(name = "name") //this maps java var name to my sql column name
     private String name;
     @Embedded
     private Certificate certi;
     public Certificate getCerti() { return certi; }
     public void setCerti(Certificate certi) { this.certi = certi; }
+    @Column(name = "city")
+    private String city;
 
 
     // Getters and Setters
