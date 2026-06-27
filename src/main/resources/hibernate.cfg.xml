@@ -21,7 +21,7 @@
         <mapping class="mapping.Answer" />
         <mapping class="manytomany.Emp" />
         <mapping class="manytomany.Project" />
-
+        <mapping class="criteria.Studentt"/>
 
     </session-factory>
 </hibernate-configuration>
