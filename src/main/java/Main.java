@@ -14,7 +14,6 @@ public class Main {
         SessionFactory factory = new Configuration()
                 .configure("hibernate.cfg.xml")
                 .buildSessionFactory();
-
         // Step 2 - Get Session
         Session session = factory.openSession();
 
