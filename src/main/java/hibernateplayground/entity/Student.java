@@ -22,8 +22,20 @@ public class Student {
                 ", city='" + city + '\'' +
                 ", id=" + id +
                 ", age=" + age +
+                ", email='" + email + '\'' +
                 '}';
     }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    @Column(name = "email")
+    private String email;
 
     public Integer getId() {
         return id;
