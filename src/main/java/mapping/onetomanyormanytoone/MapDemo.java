@@ -1,13 +1,9 @@
-package mapping;
+package mapping.onetomanyormanytoone;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Queue;
 
 public class MapDemo {
     public static void main(String[] args) {
