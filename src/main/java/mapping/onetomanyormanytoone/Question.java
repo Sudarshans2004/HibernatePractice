@@ -1,4 +1,4 @@
-package mapping;
+package mapping.onetomanyormanytoone;
 
 import jakarta.persistence.*;
 
