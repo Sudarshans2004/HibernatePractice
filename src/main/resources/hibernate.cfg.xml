@@ -17,8 +17,8 @@
         <property name="hibernate.show_sql">true</property>
         <mapping class="Student"/>
         <mapping class="Address" />
-        <mapping class="mapping.Question" />
-        <mapping class="mapping.Answer" />
+        <mapping class="mapping.onetomanyormanytoone.Question" />
+        <mapping class="mapping.onetomanyormanytoone.Answer" />
         <mapping class="manytomany.Emp" />
         <mapping class="manytomany.Project" />
         <mapping class="criteria.Studentt"/>
